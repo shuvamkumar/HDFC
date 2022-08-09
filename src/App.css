@@ -46,7 +46,7 @@
 
 .first-container p {
   color: rgb(0, 76, 143);
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
   padding: 0 2rem;
 }
@@ -57,8 +57,9 @@
   background-color: rgb(0, 76, 143);
   color: white;
   padding: 0.5rem 1rem;
-  border-radius: 7px;
   margin: 1rem 0;
+  font-size: 1rem;
+  border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
@@ -76,6 +77,7 @@
 
 .first-container .bg {
   width: 100vw;
+  margin-top: 2rem;
 }
 
 .form-container {
