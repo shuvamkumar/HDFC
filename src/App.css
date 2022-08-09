@@ -1,0 +1,135 @@
+.App {
+  /* text-align: center;
+  background: url("./assets/back.png");
+  background-repeat: repeat;
+  min-height: 100vh;
+  min-width: 100vw; */
+}
+
+.first-container,
+.third-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.first-container .azadi,
+.third-container .azadi {
+  width: 5rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.first-container .logo {
+  width: 100vw;
+  height: 11rem;
+  margin-top: 3rem;
+}
+
+.third-container .logo {
+  width: 85vw;
+  height: 10rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 320px) {
+  .first-container .logo {
+    height: 9rem;
+  }
+  .third-container .logo {
+    height: 7.5rem;
+  }
+}
+
+.first-container p {
+  color: rgb(0, 76, 143);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.first-container button,
+.third-container button {
+  border: none;
+  background-color: rgb(0, 76, 143);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  margin: 1rem 0;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.third-container button {
+  padding: 0.5rem 2rem;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.first-container .bg {
+  width: 100vw;
+}
+
+.form-container {
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.form-container input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.form-container input:active,
+.form-container input:focus,
+.form-container input:focus-visible {
+  border: none;
+  outline: none;
+  border-bottom: 1.3px solid rgb(0, 76, 143);
+}
+
+.third-container .card {
+  background-color: rgb(0, 76, 143);
+  color: white;
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  margin: 1rem 2rem;
+}
+
+.third-container .card h4 {
+  text-align: center;
+}
+
+.options {
+  padding: 0.5rem 0.8rem !important;
+  display: block;
+  background-color: #fff !important;
+  color: black !important;
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+}
