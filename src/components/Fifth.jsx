@@ -48,7 +48,11 @@ const Fifth = () => {
           flexDirection: "column",
         }}
       >
-        <img src={logo} alt="" style={{ maxHeight: "20vh", width: "90vw" }} />
+        <img
+          src={logo}
+          alt=""
+          style={{ maxHeight: "20vh", width: "90vw", marginTop: "4rem" }}
+        />
 
         <img
           src={azadi}
@@ -57,7 +61,7 @@ const Fifth = () => {
             width: "7rem",
             position: "absolute",
             right: 0,
-            top: 100,
+            top: 0,
             marginBottom: "2rem",
           }}
         />
@@ -65,8 +69,7 @@ const Fifth = () => {
           style={{
             textAlign: "center",
             fontWeight: "600",
-            marginTop: "2rem",
-            padding: "2rem 2rem 0 2rem",
+            padding: "0rem 2rem 1rem 2rem",
           }}
         >
           Try{" "}
@@ -98,7 +101,12 @@ const Fifth = () => {
               <img
                 src={imgSrc}
                 alt="captured-img"
-                style={{ position: "absolute", top: 0 }}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  height: 300,
+                  width: 300,
+                }}
               />
               <img
                 src={frame}

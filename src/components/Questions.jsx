@@ -6,7 +6,7 @@ import circle from "../assets/circle.png";
 
 const Questions = ({ setState, state }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [mark, setMark] = useState(0);
 
   const handleTimer = () => {
@@ -22,7 +22,7 @@ const Questions = ({ setState, state }) => {
   const handleCountDown = () => {
     setTimeout(() => {
       if (count !== 10) setCount(count + 1);
-      else setCount(0);
+      else setCount(1);
       console.log(count);
     }, 1000);
   };
