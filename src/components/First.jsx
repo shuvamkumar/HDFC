@@ -57,11 +57,12 @@ const First = ({ setState, state }) => {
             className="form-container"
             onSubmit={handleSubmit}
           >
-            <label htmlFor="">Name</label>
+            {/* <label htmlFor="">Name</label> */}
             <input
+              className="input-field"
               type="text"
               name=""
-              //   placeholder="Enter Your Full Name"
+              placeholder="Full Name"
               id=""
               onChange={(e) => {
                 setName(e.target.value);
@@ -69,23 +70,27 @@ const First = ({ setState, state }) => {
               value={name}
               required
             />
-            <label htmlFor="">Phone Number</label>
+            {/* <label htmlFor="">Phone Number</label> */}
             <input
               type="number"
               name=""
-              //   placeholder="Phone No."
+              placeholder="Phone no."
               id=""
               required
               onChange={(e) => {
-                setPhoneNumber(e.target.value);
+                {
+                  if (e.target.value < 9999999999)
+                    setPhoneNumber(e.target.value);
+                }
               }}
               value={phoneNumber}
+              className="input-field"
             />
-            <label htmlFor="">City</label>
             <input
+              className="input-field"
               type="text"
               name=""
-              // placeholder="City"
+              placeholder="City"
               id=""
               required
               onChange={(e) => {
@@ -93,10 +98,12 @@ const First = ({ setState, state }) => {
               }}
               value={city}
             />
-            <label htmlFor="">Email ID</label>
+            {/* <label htmlFor="">Email ID</label> */}
             <input
               type="email"
-              // name="" placeholder="Email Id"
+              className="input-field"
+              name=""
+              placeholder="Mail ID"
               id=""
               required
               onChange={(e) => {
@@ -149,7 +156,14 @@ const First = ({ setState, state }) => {
                 details shared to be correct.
               </label>
             </div>
-            <div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "100%",
+              }}
+            >
               <button type="submit">My Heart Beats For India</button>
             </div>
           </form>
