@@ -14,6 +14,8 @@ const Fifth = () => {
   const domEl = useRef(null);
 
   const downloadImage = async () => {
+    const mainTarget = document.getElementById("main_target");
+    mainTarget.style.display = "none";
     const dataUrl = await htmlToImage.toPng(domEl.current);
     console.log(dataUrl);
     // download image
@@ -94,8 +96,10 @@ const Fifth = () => {
         </p>
       </div>
       {imgSrc ? (
-        <div id="domEl" ref={domEl} style={{}}>
+        <div style={{}}>
           <div
+            id="domEl"
+            ref={domEl}
             style={{
               width: "100vw",
               height: "50vh",
@@ -131,10 +135,12 @@ const Fifth = () => {
                   zIndex: 2,
                   position: "absolute",
                   top: 0,
+                  objectFit: "cover",
                 }}
               />
             </div>
             <div
+              id="main_target"
               style={{
                 display: "flex",
                 position: "absolute",
