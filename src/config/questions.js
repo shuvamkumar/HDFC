@@ -22,7 +22,7 @@ const questions = [
         title: "Which famous Indian Musician in the Independent Era was first to bag, Grammy Awards,Oscars for Music?",
         options: ["Zakir Hussain", "Pandit Ravi Shankar", "A.R Rahman", "R.D Burman"],
         correctOption: "Pandit Ravi Shankar",
-        img: mr
+        img: ""
     },
     {
         id: 4,
@@ -34,9 +34,9 @@ const questions = [
     {
         id: 5,
         title: "The world’s till date biggest development program “White Revolution” pioneered by Verghese Kurien was rolled out for production of which item?",
-        options: ["Fabric Cotton & Jute", "Milk & Dairy", "Fish & Seafood", "Diamond & Jewellery"],
-        correctOption: "Milk & Dairy",
-        img: ""
+        options: ["Fabric Cotton & Jute", "Milk and Dairy", "Fish & Seafood", "Diamond & Jewellery"],
+        correctOption: "Milk and Dairy",
+        img: mr
     },
     {
         id: 6,
@@ -63,7 +63,7 @@ const questions = [
         id: 9,
         title: "SII is an Indian brand since 70 years which has put India in the global map by making India the largest producer of what ?",
         options: ["Fertilizer & Organic Manure", "Wheat & Barley", "Herbs & Spices", "Vaccines"],
-        correctOption: "Herbs & Spices",
+        correctOption: "Vaccines",
         img: ""
     },
     {
