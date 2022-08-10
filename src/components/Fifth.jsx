@@ -102,7 +102,7 @@ const Fifth = () => {
             ref={domEl}
             style={{
               width: "100vw",
-              height: "50vh",
+              height: "19rem",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -123,14 +123,14 @@ const Fifth = () => {
                   position: "absolute",
                   top: 0,
                   height: 300,
-                  width: 300,
+                  width: "100vw",
                 }}
               />
               <img
                 src={frame}
                 alt="captured-img"
                 style={{
-                  width: 300,
+                  width: "100vw",
                   height: 300,
                   zIndex: 2,
                   position: "absolute",
