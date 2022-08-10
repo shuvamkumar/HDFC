@@ -13,13 +13,11 @@ const Questions = ({ setState, state }) => {
 
   const handleOptionClick = (e) => {
     setIsClicked(true);
-    console.log(e.target.innerHTML);
     if (
       e.target.innerHTML ===
       questions.questions[currentQuestionIndex]["correctOption"]
     ) {
       setMark(mark + 1);
-      console.log(mark);
     }
     if (currentQuestionIndex === questions.questions.length - 1) {
       setTimeout(() => {

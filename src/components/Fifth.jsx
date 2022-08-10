@@ -1,13 +1,27 @@
 import ImageCapture from "react-image-data-capture";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMemo } from "react";
 import { useCallback } from "react";
 import frame from "../assets/frame.png";
 import logo from "../assets/logo.png";
 import azadi from "../assets/azadi.png";
 import React from "react";
+// import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
+import * as htmlToImage from "html-to-image";
 
 const Fifth = () => {
+  const [flag, setFlag] = useState(false);
+  const domEl = useRef(null);
+
+  const downloadImage = async () => {
+    const dataUrl = await htmlToImage.toPng(domEl.current);
+    console.log(dataUrl);
+    // download image
+    const link = document.createElement("a");
+    link.download = "html-to-img.png";
+    link.href = dataUrl;
+    link.click();
+  };
   const [imgSrc, setImgSrc] = useState(null);
   const [imgFile, setImgFile] = useState(null);
   const onCapture = (imageData) => {
@@ -80,11 +94,11 @@ const Fifth = () => {
         </p>
       </div>
       {imgSrc ? (
-        <div className="">
+        <div id="domEl" ref={domEl} style={{}}>
           <div
             style={{
               width: "100vw",
-              height: "85vh",
+              height: "50vh",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -120,20 +134,41 @@ const Fifth = () => {
                 }}
               />
             </div>
-            <button
+            <div
               style={{
+                display: "flex",
                 position: "absolute",
                 top: 330,
-                backgroundColor: "#004687",
-                color: "white",
-                border: "none",
-                padding: "0.7rem 1.2rem",
-                borderRadius: "5px",
               }}
-              onClick={captureAgain}
             >
-              Capture again
-            </button>
+              <button
+                style={{
+                  backgroundColor: "#004687",
+                  color: "white",
+                  border: "none",
+                  padding: "0.7rem 1.2rem",
+                  borderRadius: "24px",
+                  marginRight: "1rem",
+                  marginBottom: "2rem",
+                }}
+                onClick={captureAgain}
+              >
+                Capture again
+              </button>
+              <button
+                style={{
+                  backgroundColor: "#004687",
+                  color: "white",
+                  border: "none",
+                  padding: "0.7rem 2.4rem",
+                  borderRadius: "24px",
+                  marginBottom: "2rem",
+                }}
+                onClick={downloadImage}
+              >
+                Save
+              </button>
+            </div>
           </div>
         </div>
       ) : (
