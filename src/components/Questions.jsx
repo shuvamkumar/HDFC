@@ -144,6 +144,19 @@ const Questions = ({ setState, state }) => {
                   }}
                 >{`${mark}/10`}</h3>
               </div>
+              <button
+                onClick={() => {
+                  setState(6);
+                }}
+                className="btn"
+                style={{
+                  width: "90%",
+                  borderRadius: "30px",
+                  marginTop: "2rem",
+                }}
+              >
+                Click here to see your true patriotself
+              </button>
             </>
           )}
         </div>

@@ -52,7 +52,8 @@
 }
 
 .first-container button,
-.third-container button {
+.third-container button,
+.btn {
   border: none;
   background-color: #ec1c24;
   color: white;
@@ -66,7 +67,8 @@
   -o-border-radius: 16px;
 }
 
-.first-container button:hover {
+.first-container button:hover,
+.btn:hover {
   transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -moz-transform: scale(0.95);
