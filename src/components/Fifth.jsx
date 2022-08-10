@@ -14,6 +14,8 @@ const Fifth = () => {
   const domEl = useRef(null);
 
   const downloadImage = async () => {
+    const mainTarget = document.getElementById("main_target");
+    mainTarget.style.display = "none";
     const dataUrl = await htmlToImage.toPng(domEl.current);
     console.log(dataUrl);
     // download image
