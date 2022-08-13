@@ -99,7 +99,7 @@ const Fifth = () => {
           <div
             style={{
               width: "100vw",
-              height: "45vh",
+              height: "40vh",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
