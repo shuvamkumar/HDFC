@@ -120,16 +120,16 @@ const Fifth = () => {
                 style={{
                   position: "absolute",
                   top: 0,
-                  height: 300,
-                  width: 300,
+                  height: 320,
+                  width: 320,
                 }}
               />
               <img
                 src={frame}
                 alt="captured-img"
                 style={{
-                  width: 300,
-                  height: 300,
+                  width: 320,
+                  height: 320,
                   zIndex: 2,
                   position: "absolute",
                   top: 0,
