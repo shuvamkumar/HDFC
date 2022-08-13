@@ -6,24 +6,16 @@ import frame from "../assets/frame.png";
 import logo from "../assets/logo.png";
 import azadi from "../assets/azadi.png";
 import React from "react";
-// import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
-import * as htmlToImage from "html-to-image";
+import {
+  exportComponentAsJPEG,
+  exportComponentAsPDF,
+  exportComponentAsPNG,
+} from "react-component-export-image";
 
 const Fifth = () => {
   const [flag, setFlag] = useState(false);
   const domEl = useRef(null);
 
-  const downloadImage = async () => {
-    const mainTarget = document.getElementById("main_target");
-    mainTarget.style.display = "none";
-    const dataUrl = await htmlToImage.toPng(domEl.current);
-    console.log(dataUrl);
-    // download image
-    const link = document.createElement("a");
-    link.download = "html-to-img.png";
-    link.href = dataUrl;
-    link.click();
-  };
   const [imgSrc, setImgSrc] = useState(null);
   const [imgFile, setImgFile] = useState(null);
   const onCapture = (imageData) => {
@@ -96,7 +88,14 @@ const Fifth = () => {
         </p>
       </div>
       {imgSrc ? (
-        <div style={{}}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+        >
           <div
             id="domEl"
             ref={domEl}
@@ -123,14 +122,14 @@ const Fifth = () => {
                   position: "absolute",
                   top: 0,
                   height: 300,
-                  width: "100vw",
+                  width: 300,
                 }}
               />
               <img
                 src={frame}
                 alt="captured-img"
                 style={{
-                  width: "100vw",
+                  width: 300,
                   height: 300,
                   zIndex: 2,
                   position: "absolute",
@@ -146,36 +145,34 @@ const Fifth = () => {
                 position: "absolute",
                 top: 330,
               }}
-            >
-              <button
-                style={{
-                  backgroundColor: "#004687",
-                  color: "white",
-                  border: "none",
-                  padding: "0.7rem 1.2rem",
-                  borderRadius: "24px",
-                  marginRight: "1rem",
-                  marginBottom: "2rem",
-                }}
-                onClick={captureAgain}
-              >
-                Capture again
-              </button>
-              <button
-                style={{
-                  backgroundColor: "#004687",
-                  color: "white",
-                  border: "none",
-                  padding: "0.7rem 2.4rem",
-                  borderRadius: "24px",
-                  marginBottom: "2rem",
-                }}
-                onClick={downloadImage}
-              >
-                Save
-              </button>
-            </div>
+            ></div>
           </div>
+          <button
+            style={{
+              backgroundColor: "#004687",
+              color: "white",
+              border: "none",
+              padding: "0.7rem 1.2rem",
+              borderRadius: "24px",
+              marginBottom: "1rem",
+            }}
+            onClick={captureAgain}
+          >
+            Capture again
+          </button>
+          <button
+            style={{
+              backgroundColor: "#004687",
+              color: "white",
+              border: "none",
+              padding: "0.7rem 3rem",
+              borderRadius: "24px",
+              marginBottom: "2rem",
+            }}
+            onClick={() => exportComponentAsPNG(domEl)}
+          >
+            Save
+          </button>
         </div>
       ) : (
         <div style={{ textAlign: "center" }}>

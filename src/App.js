@@ -2,6 +2,7 @@ import './App.css';
 import First from "./components/First.jsx"
 import Fifth from "./components/Fifth.jsx"
 import Third from "./components/Third.jsx"
+import Camera from "./components/Camera.jsx"
 import { useEffect, useState } from 'react';
 import Questions from './components/Questions';
 
